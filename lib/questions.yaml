@@ -1,0 +1,63 @@
+questions:
+  - title: President Joe Biden signed 15 executive orders on his first day in office. Which of these was not one of them?
+    options:
+      - text: Mandatory mask wearing inside government buildings
+      - text: Rejoin the world health organisation
+      - text: Approved the green new deal
+        correct: true
+      - text: Stopped the wall construction
+    image:
+      url: joe-biden.jpg
+      flip: true
+  - title: If Donald Trump was the 45th president of the United States, how many vice presidents have come before Kamala Harris?
+    options:
+      - text: 45
+      - text: 46
+      - text: 47
+      - text: 48
+        correct: true
+    image:
+      url: kamala-harris.jpg
+      flip: false
+  - title: During one of the debates in October, what event drew attention to him?
+    preSubtitle: Mike Pence did not attend Trump's last event and the same week posted photos on social media reflecting on his time as VP, Trump not appearing in a single one. During one of the debates in October, what event drew attention to him?
+    options:
+      - text: A fly landed on his head
+        correct: true
+      - text: He forgot Kamala’s name
+      - text: He got hit with a microphone
+      - text: He had a chipped tooth
+    image:
+      url: mike-pence.webp
+      flip: false
+  - title: Donald Trump is the first US President to be impeached twice. What was the reason for his first impeachment?
+    options:
+      - text: Tax evasion, after it was revealed he paid $750 of income tax
+      - text: Inciting violence after the BLM riots
+      - text: Coercion with a "quid pro quo" military aid package
+        correct: true
+      - text: Providing Russian officials with classified information in the Oval Office
+    image:
+      url: trump-ukraine.jpg
+      flip: false
+      obscured: true
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+        correct: true
+      - text:
+    image:
+      url:
+      flip: false
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+        correct: true
+      - text:
+    image:
+      url:
+      flip: false
