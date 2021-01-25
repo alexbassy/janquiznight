@@ -1,4 +1,5 @@
 questions:
+  # Round 1 - US news
   - title: President Joe Biden signed 15 executive orders on his first day in office. Which of these was not one of them?
     options:
       - text: Mandatory mask wearing inside government buildings
@@ -9,6 +10,7 @@ questions:
     image:
       url: joe-biden.jpg
       flip: true
+
   - title: If Donald Trump was the 45th president of the United States, how many vice presidents have come before Kamala Harris?
     options:
       - text: 45
@@ -19,6 +21,7 @@ questions:
     image:
       url: kamala-harris.jpg
       flip: false
+
   - title: During one of the debates in October, what event drew attention to him?
     preSubtitle: Mike Pence did not attend Trump's last event and the same week posted photos on social media reflecting on his time as VP, Trump not appearing in a single one. During one of the debates in October, what event drew attention to him?
     options:
@@ -28,8 +31,9 @@ questions:
       - text: He got hit with a microphone
       - text: He had a chipped tooth
     image:
-      url: mike-pence.webp
-      flip: false
+      url: mike-pence-fly.jpg
+      obscured: true
+
   - title: Donald Trump is the first US President to be impeached twice. What was the reason for his first impeachment?
     options:
       - text: Tax evasion, after it was revealed he paid $750 of income tax
@@ -41,6 +45,125 @@ questions:
       url: trump-ukraine.jpg
       flip: false
       obscured: true
+
+  # Round 2 - Berlin history
+  - title: The allied forces occupied Berlin in 4 sectors. Checkpoint Charlie was a station between which forces?
+    options:
+      - text: United States and the Soviet Union
+        correct: true
+      - text: United States and Great Britain
+      - text: Great Britain and the Soviet Union
+      - text: France and Great Britain
+    image:
+      url: checkpoint-charlie.jpg
+      obscured: true
+
+  - title: Which river flows through Berlin?
+    options:
+      - text: The Rhine
+      - text: The Main
+      - text: The Spree
+        correct: true
+      - text: The Elbe
+    image:
+      url: spree.jpg
+      flip: false
+
+  - title: What was the Berliner Lüftbrücke?
+    options:
+      - text: A currency introduced in East Germany during Soviet occupation
+      - text: The delivery of supplies to West Berlin during the Cold War
+        correct: true
+      - text: The name given to the fall of the Berlin Wall in 1989
+      - text: An unconstitutional tariff on imports from West Berlin to East Berlin
+    image:
+      url: lueftbruecker.jpg
+      flip: false
+      obscured: true
+
+  - title: Which of these facts about the GDR is not true?
+    options:
+      - text: Jeans were prohibited until the 1970s
+      - text: Women were given financial incentives to have children (Hausfraugeld)
+        correct: true
+      - text: One in 90 East Germans worked unofficially for the secret police
+      - text: It took up to 15 years to get the opportunity to buy a car
+    image:
+      url: ddr.jpg
+      flip: false
+
+  # Round 3 - Movie quotes
+  - title: “You had me at ‘hello’.”
+    options:
+      - text: Jerry Maguire
+        correct: true
+      - text: Notting Hill
+      - text: When Harry Met Sally
+      - text: The Notebook
+    image:
+      url: jerry.jpg
+      flip: false
+      obscured: true
+
+  - title: “Frankly, my dear, I don’t give a damn.”
+    options:
+      - text: Gone With The Wind
+        correct: true
+      - text: Some Like It Hot
+      - text: Casablanca
+      - text: The Help
+    image:
+      url: gone-with-the-wind.jpg
+      flip: false
+      obscured: true
+
+  - title: “Hasta la vista, baby.”
+    options:
+      - text: Kindergarten Cop
+      - text: Commando
+      - text: Terminator 2
+        correct: true
+      - text: Predator
+    image:
+      url: teminator.jpg
+      flip: true
+      obscured: true
+
+  - title: “To infinity and beyond!”
+    options:
+      - text: Toy Story
+        correct: true
+      - text: Apollo 18
+      - text: Dora the Explorer
+      - text: For All Mankind
+    image:
+      url: buzz.jpg
+      flip: false
+      obscured: true
+
+  # Round 4 - Random facts
+  - title: What is Barbie’s full name?
+    options:
+      - text: Miss Barbie
+      - text: Princess Barbara II
+      - text: Barbara Hannah Stacey
+      - text: Barbara Millicent Roberts
+        correct: true
+    image:
+      url: barbie.jpg
+      flip: false
+
+  - title: When do horses start walking after being born?
+    options:
+      - text: Immediately
+      - text: Around 2 hours
+        correct: true
+      - text: Around 2 days
+      - text: Around 2 weeks
+    image:
+      url: horse.jpg
+      flip: false
+
   - title:
     options:
       - text:
@@ -51,6 +174,18 @@ questions:
     image:
       url:
       flip: false
+
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+        correct: true
+      - text:
+    image:
+      url:
+      flip: false
+
   - title:
     options:
       - text:
