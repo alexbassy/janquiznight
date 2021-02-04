@@ -125,7 +125,7 @@ questions:
         correct: true
       - text: Predator
     image:
-      url: teminator.jpg
+      url: terminator.jpg
       flip: true
       obscured: true
 
@@ -141,7 +141,52 @@ questions:
       flip: false
       obscured: true
 
-  # Round 4 - Random facts
+  # Round 4
+  - title: Guess the movie
+    options:
+      - text: Bridget Jones
+      - text: Mamma mia
+        correct: true
+      - text: The World’s End
+      - text: The Island
+    image:
+      url: mamma-mia.jpg
+      flip: false
+
+  - title: Guess the movie
+    options:
+      - text: Princess Diaries
+        correct: true
+      - text: The Devil Wears Prada
+      - text: Ella Enchanted
+      - text: The Assistant
+    image:
+      url: princess-diaries.jpg
+      flip: false
+
+  - title: Guess the movie
+    options:
+      - text: Wolverine
+      - text: The Magician
+      - text: Magic Mike
+      - text: The Greatest Showman
+        correct: true
+    image:
+      url: greatest-showman.jpg
+      flip: false
+
+  - title: Guess the movie
+    options:
+      - text: Forrest Gump
+        correct: true
+      - text: My Girl
+      - text: Matilda
+      - text: The Terminal
+    image:
+      url: forrest-gump.jpg
+      flip: false
+
+  # Round 5 - Random facts
   - title: What is Barbie’s full name?
     options:
       - text: Miss Barbie
@@ -164,35 +209,70 @@ questions:
       url: horse.jpg
       flip: false
 
-  - title:
+  - title: How many breaths on average does a human take in a day?
     options:
-      - text:
-      - text:
-      - text:
+      - text: Roughly 2,000
+      - text: Roughly 8,000
+      - text: Roughly 20,000
         correct: true
-      - text:
+      - text: Roughly 80,000
     image:
-      url:
+      url: yoga.jpg
       flip: false
 
-  - title:
+  - title: Which of these facts is false?
     options:
-      - text:
-      - text:
-      - text:
+      - text: There are 278 ways to make £1 with coins
         correct: true
-      - text:
+      - text: The eye of an ostrich is bigger than its brain
+      - text: Pigeons cannot fart
+      - text: Tiramisu translates to ‘pick me up’ in Italian
     image:
-      url:
+      url: coins.jpg
+      flip: false
+      obscured: true
+
+  # Round 6 - tech
+  - title: How is 5G different to 4G?
+    options:
+      - text: It uses less energy
+      - text: It transmits disease
+      - text: It uses a higher frequency
+        correct: true
+      - text: It uses a lower frequency
+    image:
+      url: 5g.webp
       flip: false
 
-  - title:
+  - title: What does open source mean?
     options:
-      - text:
-      - text:
-      - text:
+      - text: Software that is maintained by volunteers
         correct: true
-      - text:
+      - text: A port that accepts a cable in any orientation (reversible)
+      - text: Ketchup that has had the seal broken
+      - text: An app that doesn’t cost money to use
     image:
-      url:
+      url: tech.webp
+      flip: false
+
+  - title: How many bits are there in a megabyte?
+    options:
+      - text: 8,000,000
+        correct: true
+      - text: 1,024,000
+      - text: 1,000,000
+      - text: 4,096,000
+    image:
+      url: data.webp
+      flip: false
+
+  - title: Why is Big Data important?
+    options:
+      - text: Because it is structured
+      - text: Because of its complexity
+      - text: Because it can reveal patterns and trends
+        correct: true
+      - text: Because of its size
+    image:
+      url: big-data.jpg
       flip: false

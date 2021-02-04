@@ -31,6 +31,12 @@ const TextWrapper = styled(motion.section)`
   padding: 0 10vw 0 5vw;
 `
 
+const textVariants = {
+  initial: { opacity: 0 },
+  shown: { opacity: 1 },
+  hidden: { opacity: 0 },
+}
+
 const textAppearance = {
   initial: { opacity: 0, y: '4vh' },
   shown: { opacity: 1, y: 0 },
@@ -47,7 +53,7 @@ const listVariants = {
   shown: {
     transition: {
       delayChildren: 1,
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
   hidden: {
@@ -61,10 +67,19 @@ const Title = styled(motion.h1)`
   margin-bottom: 8vh;
 `
 
+const Count = styled(motion.h2)`
+  font-size: 4vh;
+  margin: 0;
+  font-weight: 100;
+  color: #ffffff80;
+  margin-bottom: 2vh;
+`
+
 const List = styled(motion.ol)`
   list-style: none;
   padding: 0;
   counter-reset: option-counter;
+  margin-bottom: auto;
 `
 
 const Item = styled(motion.li)`
@@ -135,16 +150,32 @@ const Image = styled(NextImage)`
 `
 
 export default function Slide(props) {
-  const { id, image, isAnswerShown, title, options } = props
+  const {
+    id,
+    count,
+    image,
+    isAnswerShown,
+    isPhotoShown,
+    title,
+    options,
+  } = props
   const imageURL = `/slide-images/${props.image.url}`
   return (
     <Container>
       <AnimatePresence exitBeforeEnter>
         <ImageContainer
           key={imageURL}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{
+            opacity: 0,
+            scale: 1,
+            rotateY: image.flip ? 180 : 0,
+          }}
+          animate={{ opacity: 1, scale: 1.1 }}
+          exit={{
+            opacity: 0,
+            transition: { delay: 0, duration: 0.5 },
+          }}
+          transition={{ delay: 0.5, duration: 2 }}
           isFlipped={image.flip}
         >
           <Image
@@ -156,14 +187,21 @@ export default function Slide(props) {
       </AnimatePresence>
       <TextWrapper
         initial='initial'
-        animate='shown'
+        animate={isPhotoShown ? 'initial' : 'shown'}
         exit='hidden'
-        variants={listVariants}
+        variants={textVariants}
       >
+        <Count
+          key={'count ' + count}
+          variants={textAppearance}
+          transition={{ duration: 1 }}
+        >
+          {count}
+        </Count>
         <Title
           key={'title ' + id}
           variants={textAppearance}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
         >
           {title}
         </Title>

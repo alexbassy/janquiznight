@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
 `
 
 const Footer = styled.footer`
@@ -43,8 +44,6 @@ export default function Layout(props) {
       </Head>
 
       <main>{props.children}</main>
-
-      <Footer></Footer>
     </Container>
   )
 }
