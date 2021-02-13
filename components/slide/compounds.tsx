@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { IQuestionImage, IQuestionOption } from '../../lib/questions'
 import {
   ImageContainer,
@@ -21,28 +22,30 @@ export const SlideImage = ({ image, isAnswerShown }: ISlideImageProps) => {
   const imageURL = `/slide-images/${image.url}`
 
   return (
-    <ImageContainer
-      key={imageURL}
-      initial={{
-        opacity: 0,
-        scale: 1.1,
-        rotateY: image.flip ? 180 : 0,
-      }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{
-        opacity: 0,
-        transition: { delay: 0, duration: 0.5 },
-      }}
-      transition={{ delay: 0.5, duration: 2 }}
-      isFlipped={image.flip}
-    >
-      <Image
-        src={imageURL}
-        layout='fill'
-        objectFit='cover'
-        isObscured={!isAnswerShown && image.obscured}
-      />
-    </ImageContainer>
+    <AnimatePresence exitBeforeEnter>
+      <ImageContainer
+        key={imageURL}
+        initial={{
+          opacity: 0,
+          scale: 1.1,
+          rotateY: image.flip ? 180 : 0,
+        }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{
+          opacity: 0,
+          transition: { delay: 0, duration: 0.5 },
+        }}
+        transition={{ delay: 0.5, duration: 2 }}
+        isFlipped={image.flip}
+      >
+        <Image
+          src={imageURL}
+          layout='fill'
+          objectFit='cover'
+          isObscured={!isAnswerShown && image.obscured}
+        />
+      </ImageContainer>
+    </AnimatePresence>
   )
 }
 

@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from 'framer-motion'
 import { IQuestion } from '../../lib/questions'
 import { Container } from './atoms'
 import {
@@ -27,9 +26,7 @@ export function Slide(props: ISlideProps) {
   } = props
   return (
     <Container>
-      <AnimatePresence exitBeforeEnter>
-        <SlideImage image={image} isAnswerShown={isAnswerShown} />
-      </AnimatePresence>
+      <SlideImage image={image} isAnswerShown={isAnswerShown} />
       <SlideTextContainer isPhotoShown={isPhotoShown}>
         <SlideCount count={count} />
         <SlideTitle id={id}>{title}</SlideTitle>
