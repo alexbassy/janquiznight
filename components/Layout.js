@@ -3,22 +3,12 @@ import styled from '@emotion/styled'
 import Head from 'next/head'
 
 const Container = styled.div`
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
-`
-
-const Footer = styled.footer`
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 export default function Layout(props) {
@@ -42,8 +32,7 @@ export default function Layout(props) {
           rel='stylesheet'
         />
       </Head>
-
-      <main>{props.children}</main>
+      {props.children}
     </Container>
   )
 }

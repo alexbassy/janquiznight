@@ -2,15 +2,7 @@ import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Slide from '../components/Slide'
 import Layout from '../components/Layout'
-import { questions as rawQuestions } from '../lib/questions.yaml'
-import { nanoid } from 'nanoid'
-
-const questions = rawQuestions.map((q, i) => ({
-  ...q,
-  id: nanoid(),
-  count: i + 1,
-  options: q.options.map((o) => ({ ...o, id: nanoid() })),
-}))
+import questions from '../lib/questions'
 
 const Question = () => {
   const router = useRouter()
@@ -72,11 +64,13 @@ const Question = () => {
 
   return (
     <Layout>
-      <Slide
-        {...activeQuestion}
-        isAnswerShown={isAnswerShown}
-        isPhotoShown={isPhotoShown}
-      />
+      <main>
+        <Slide
+          {...activeQuestion}
+          isAnswerShown={isAnswerShown}
+          isPhotoShown={isPhotoShown}
+        />
+      </main>
     </Layout>
   )
 }
