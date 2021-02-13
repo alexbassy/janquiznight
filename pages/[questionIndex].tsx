@@ -1,6 +1,6 @@
 import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Slide from '../components/Slide'
+import { Slide } from '../components/slide/organisms'
 import Layout from '../components/Layout'
 import questions from '../lib/questions'
 
