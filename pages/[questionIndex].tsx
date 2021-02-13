@@ -25,7 +25,7 @@ const Question = () => {
       setIsPhotoShown(false)
       router.push({ query: { questionIndex: id - 1 } })
     }
-  }, [questionIndex, isAnswerShown])
+  }, [id, isAnswerShown])
 
   const onNext = useCallback(() => {
     if (!isAnswerShown) {
@@ -38,14 +38,14 @@ const Question = () => {
     router.push({ query: { questionIndex: id + 1 } })
     setIsAnswerShown(false)
     setIsPhotoShown(false)
-  }, [questionIndex, isAnswerShown])
+  }, [id, isAnswerShown])
 
   const onShowPicture = useCallback(() => {
     setIsPhotoShown((isPhotoShown) => !isPhotoShown)
   }, [])
 
   useEffect(() => {
-    const onKeyUp = (ev) => {
+    const onKeyUp = (ev: KeyboardEvent) => {
       if (ev.key === ' ' || ev.key === 'ArrowRight') onNext()
       if (ev.key === 'ArrowLeft') onPrevious()
       if (ev.key === 'ArrowUp') onShowPicture()
@@ -54,12 +54,12 @@ const Question = () => {
     return () => document.removeEventListener('keyup', onKeyUp)
   }, [onNext, onPrevious])
 
-  if (!/^\d+$/.test(questionIndex)) {
-    return 'Die Route sollte numerisch sein'
+  if (!/^\d+$/.test(id.toString())) {
+    return 'Only numbers accepted there'
   }
 
   if (!activeQuestion) {
-    return 'Es gibt keine Frage mit diesem ID'
+    return 'That’s not a question yet'
   }
 
   return (

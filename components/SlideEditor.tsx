@@ -1,7 +1,7 @@
+import React from 'react'
 import styled from '@emotion/styled'
-import Image from 'next/image'
 import { IQuestion } from '../lib/questions'
-import { SlideImage } from './slide/compounds'
+import { SlideImage, SlideTextContainer, SlideTitle } from './slide/compounds'
 
 const Container = styled.div`
   width: 100%;
@@ -16,17 +16,17 @@ interface ISlideEditorProps {
 }
 
 export default function SlideEditor(props: ISlideEditorProps) {
-  const { title, options, image } = props.question
+  const { id, title, options, image } = props.question
   return (
     <Container>
-      <div>
-        <h2>{title}</h2>
+      <SlideTextContainer isPhotoShown>
+        <SlideTitle id={id}>{title}</SlideTitle>
         <ol>
           {options.map((option) => {
             return <li key={option.id}>{option.text}</li>
           })}
         </ol>
-      </div>
+      </SlideTextContainer>
       <SlideImage image={image} isAnswerShown />
     </Container>
   )
