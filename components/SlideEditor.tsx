@@ -2,13 +2,15 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { IQuestion } from '../lib/questions'
 import { SlideImage, SlideTextContainer, SlideTitle } from './slide/compounds'
+import { Slide } from './slide/organisms'
 
 const Container = styled.div`
-  width: 100%;
-  max-height: calc(100% - 7rem);
-  aspect-ratio: 4 / 3;
+  max-height: 100%;
+  aspect-ratio: 4/3;
   position: relative;
   margin: auto;
+  align-self: center;
+  justify-self: center;
 `
 
 interface ISlideEditorProps {
@@ -19,15 +21,7 @@ export default function SlideEditor(props: ISlideEditorProps) {
   const { id, title, options, image } = props.question
   return (
     <Container>
-      <SlideTextContainer isPhotoShown>
-        <SlideTitle id={id}>{title}</SlideTitle>
-        <ol>
-          {options.map((option) => {
-            return <li key={option.id}>{option.text}</li>
-          })}
-        </ol>
-      </SlideTextContainer>
-      <SlideImage image={image} isAnswerShown />
+      <Slide {...props.question} isEditing isAnimated={false} />
     </Container>
   )
 }

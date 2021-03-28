@@ -15,12 +15,11 @@ const Container = styled.div`
 const Header = styled.header`
   display: flex;
   height: 4rem;
-  border-bottom: 3px solid #333;
   padding: 1.2rem 1.5rem;
 `
 const Title = styled.h1`
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
 `
 const Page = styled.div`
@@ -30,7 +29,6 @@ const Page = styled.div`
 `
 const Sidebar = styled.aside`
   flex: 1;
-  background: rgb(20 20 20);
   overflow: auto;
 `
 

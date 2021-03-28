@@ -1,6 +1,7 @@
 import { useCallback, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Slide } from '../components/slide/organisms'
+import { PresentationContainer } from '../components/slide/atoms'
 import Layout from '../components/Layout'
 import questions from '../lib/questions'
 
@@ -65,11 +66,14 @@ const Question = () => {
   return (
     <Layout>
       <main>
-        <Slide
-          {...activeQuestion}
-          isAnswerShown={isAnswerShown}
-          isPhotoShown={isPhotoShown}
-        />
+        <PresentationContainer>
+          <Slide
+            {...activeQuestion}
+            isAnswerShown={isAnswerShown}
+            isPhotoShown={isPhotoShown}
+            isAnimated
+          />
+        </PresentationContainer>
       </main>
     </Layout>
   )

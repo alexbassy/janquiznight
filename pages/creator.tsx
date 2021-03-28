@@ -2,8 +2,9 @@ import styled from '@emotion/styled'
 import Image from 'next/image'
 import SlideEditor from '../components/SlideEditor'
 import CreatorLayout from '../components/CreatorLayout'
-import questions, { IQuestion } from '../lib/questions'
+import questions, { IQuestion, IQuestionOption } from '../lib/questions'
 import { useState } from 'react'
+import { css } from '@emotion/react'
 
 const List = styled.ol`
   list-style: none;
@@ -14,7 +15,11 @@ const List = styled.ol`
   margin-bottom: 1.5rem;
 `
 
-const Preview = styled.li`
+interface IPreview {
+  isActive: boolean
+}
+
+const Preview = styled.li<IPreview>`
   width: 100%;
   position: relative;
   aspect-ratio: 4 / 3;
@@ -22,6 +27,13 @@ const Preview = styled.li`
   margin-bottom: 1.5rem;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
+
+  ${(props) =>
+    props.isActive &&
+    css`
+      box-shadow: 0 0 0 0.25rem #ffffff20;
+    `}
 `
 
 const Background = styled(Image)`
@@ -30,7 +42,7 @@ const Background = styled(Image)`
 `
 
 export default function Creator() {
-  const [activeSlide, setActiveSlide] = useState<string>(
+  const [activeSlide, setActiveSlide] = useState<IQuestion['id']>(
     questions[0].id,
   )
   const activeQuestion = questions.find(
@@ -44,7 +56,12 @@ export default function Creator() {
         <List>
           {questions.map((question) => {
             return (
-              <Preview key={question.id}>
+              <Preview
+                key={question.id}
+                role='button'
+                onClick={() => setActiveSlide(question.id)}
+                isActive={activeSlide === question.id}
+              >
                 {question.image.url && (
                   <Background
                     src={`/slide-images/${question.image.url}`}

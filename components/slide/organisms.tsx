@@ -1,5 +1,5 @@
+import IsAnimatedContext from '@/contexts/isAnimatedContext'
 import { IQuestion } from '../../lib/questions'
-import { Container } from './atoms'
 import {
   SlideCount,
   SlideImage,
@@ -10,8 +10,10 @@ import {
 } from './compounds'
 
 interface ISlideProps extends IQuestion {
-  isAnswerShown: boolean
-  isPhotoShown: boolean
+  isAnswerShown?: boolean
+  isPhotoShown?: boolean
+  isEditing?: boolean
+  isAnimated?: boolean
 }
 
 export function Slide(props: ISlideProps) {
@@ -23,19 +25,24 @@ export function Slide(props: ISlideProps) {
     isPhotoShown,
     title,
     options,
+    isAnimated,
   } = props
   return (
-    <Container>
+    <IsAnimatedContext.Provider value={Boolean(isAnimated)}>
       <SlideImage image={image} isAnswerShown={isAnswerShown} />
       <SlideTextContainer isPhotoShown={isPhotoShown}>
         <SlideCount count={count} />
         <SlideTitle id={id}>{title}</SlideTitle>
         <SlideList id={id}>
           {options.map((option) => (
-            <SlideOption {...option} isAnswerShown={isAnswerShown} />
+            <SlideOption
+              key={option.id}
+              {...option}
+              isAnswerShown={isAnswerShown}
+            />
           ))}
         </SlideList>
       </SlideTextContainer>
-    </Container>
+    </IsAnimatedContext.Provider>
   )
 }

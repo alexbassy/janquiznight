@@ -2,9 +2,9 @@ import React from 'react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import NextImage from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const PresentationContainer = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -32,17 +32,15 @@ export const TextWrapper = styled(motion.section)`
 `
 
 export const Title = styled(motion.h1)`
-  font-size: 3.8vw;
-  margin-bottom: 3vh;
-  margin-bottom: 8vh;
+  font-size: 2.4rem;
+  margin: 0.5em 0;
 `
 
-export const Count = styled(motion.h2)`
-  font-size: 4vh;
-  margin: 0;
-  font-weight: 100;
+export const Count = styled(motion.span)`
+  font-size: 1rem;
+  font-weight: 600;
   color: #ffffff80;
-  margin-bottom: 2vh;
+  margin: auto 0 0;
 `
 
 export const List = styled(motion.ol)`
@@ -53,19 +51,23 @@ export const List = styled(motion.ol)`
 `
 
 export const Item = styled(motion.li)`
-  font-size: 2.4vw;
-  margin: 4vh 0;
+  font-size: 1.4rem;
+  margin: 1.4rem 0;
   transform-origin: left;
   counter-increment: option-counter;
 `
 
-interface IGrowWhenCorrect {
-  isAnswerShown: boolean
+interface IAnswer {
+  isAnswerShown?: boolean
   isCorrect: boolean
 }
 
-export const GrowWhenCorrect = styled.div<IGrowWhenCorrect>`
+export const Answer = styled.div<IAnswer>`
   display: flex;
+  align-items: center;
+  transition: 0.75s ease;
+  transition-property: opacity, transform, text-shadow;
+  transform-origin: left;
 
   ::before {
     content: counter(option-counter, upper-alpha);
@@ -79,16 +81,22 @@ export const GrowWhenCorrect = styled.div<IGrowWhenCorrect>`
     text-align: center;
     place-content: center;
     place-items: center;
+    transition: all 0.75s ease;
+    will-change: color, background-color;
+
+    ${(props) =>
+      props.isAnswerShown &&
+      props.isCorrect &&
+      css`
+        color: #ffffffaa;
+        background-color: #258629;
+      `}
   }
 
-  transition: 0.5s ease;
-  transition-property: opacity, transform, text-shadow;
-  transform-origin: left;
   ${(props) =>
     props.isAnswerShown &&
     css`
-      opacity: ${props.isCorrect ? 1 : 0.4};
-      transform: scale(${props.isCorrect ? 1.2 : 1});
+      opacity: ${props.isCorrect ? 1 : 0.2};
       text-shadow: 0 0 30px rgb(0 0 0 / 100%);
     `}
 `
@@ -120,6 +128,7 @@ export const Image = styled(NextImage)<IImageAtom>`
   width: 100%;
   height: 100%;
   transition: all 1s ease;
+  object-fit: cover;
   will-change: opacity, transform, filter;
 
   ${(props) =>
