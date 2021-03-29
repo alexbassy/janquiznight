@@ -41,7 +41,7 @@ export const SlideImage = ({ image, isAnswerShown }: ISlideImageProps) => {
           opacity: 0,
           transition: { delay: 0, duration: isAnimated ? 0.5 : 0 },
         }}
-        transition={{ delay: 0.5, duration: 2 }}
+        transition={{ delay: 0.25, duration: 1 }}
         isFlipped={image.flip}
       >
         <Image

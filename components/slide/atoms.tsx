@@ -65,7 +65,7 @@ interface IAnswer {
 export const Answer = styled.div<IAnswer>`
   display: flex;
   align-items: center;
-  transition: 0.75s ease;
+  transition: 0.25s ease;
   transition-property: opacity, transform, text-shadow;
   transform-origin: left;
 
@@ -75,21 +75,24 @@ export const Answer = styled.div<IAnswer>`
     background: #ffffff21;
     align-self: flex-start;
     display: flex;
+    flex-shrink: 0;
     font-size: 1.5rem;
     width: 1.5em;
     height: 1.5em;
     text-align: center;
     place-content: center;
     place-items: center;
-    transition: all 0.75s ease;
+    border-radius: 5px;
+    transition: all 0.25s ease;
     will-change: color, background-color;
 
     ${(props) =>
       props.isAnswerShown &&
       props.isCorrect &&
       css`
-        color: #ffffffaa;
-        background-color: #258629;
+        color: #ffffff;
+        background-color: #28bb2e;
+        box-shadow: 0 0 20px #28bb2e85;
       `}
   }
 

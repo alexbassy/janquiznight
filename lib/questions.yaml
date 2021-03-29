@@ -1,278 +1,204 @@
 questions:
-  # Round 1 - US news
-  - title: President Joe Biden signed 15 executive orders on his first day in office. Which of these was not one of them?
+  - title: What is considered the world’s oldest writing system?
     options:
-      - text: Mandatory mask wearing inside government buildings
-      - text: Rejoin the world health organisation
-      - text: Approved the green new deal
+      - text: Hieroglyphics
+      - text: Chinese
+      - text: Proto-Indo-European
+      - text: Cuneiform
         correct: true
-      - text: Stopped the wall construction
     image:
-      url: joe-biden.jpg
+      url: cuneiform.jpg
+
+  - title: What language is “家庭”?
+    options:
+      - text: Korean
+      - text: Japanese
+      - text: Chinese
+        correct: true
+      - text: Italian
+    image:
+      url: two.jpg
+
+  - title: How does a vector image differ from a raster image?
+    options:
+      - text: Vectors are infinitely scalable
+        correct: true
+      - text: Raster images are infinitely scalable
+      - text: Raster images allow more colours than vector images
+      - text: Vector images can be transparent
+    image:
+      url: vector.jpg
+
+  - title: How do you ask someone’s name in French?
+    options:
+      - text: Quel est ton numéro?
+      - text: Comment tu t’apelles?
+        correct: true
+      - text: Comment va ton poulet?
+      - text: Cómo te llamas?
+    image:
+      url: one.jpg
+
+  - title: Frankie Dettori famously won 7 races out of 7 races at which race course in 1995?
+    options:
+      - text: Ascot
+        correct: true
+      - text: Aintree
+      - text: Newmarket
+      - text: Salisbury
+    image:
+      url: horse-race.jpg
+
+  - title: Which of these colours is unlucky in Chinese culture?
+    options:
+      - text: White
+        correct: true
+      - text: Red
+      - text: Blue
+      - text: Black
+    image:
+      url: dice.jpg
+
+  - title: Bottle is a slang word for what number?
+    options:
+      - text: 0
+      - text: 1
+      - text: 2
+        correct: true
+      - text: 3
+    image:
+      url: bottle.jpg
+
+  - title: Which of these is germination?
+    options:
+      - text: Movement of water from roots up to the leaves
+      - text: Dispersal of seeds into soil
+      - text: Not washing hands after going to the bathroom
+      - text: First outward signs of growth of a seed
+        correct: true
+    image:
+      url: plants.jpg
+
+  - title: What is a plant called that sheds its leaves before winter, or during a dry spell?
+    options:
+      - text: Deciduous
+        correct: true
+      - text: Evergreen
+      - text: Recessive
+      - text: Indehiscent
+    image:
+      url: leaves.jpg
       flip: true
 
-  - title: If Donald Trump was the 45th president of the United States, how many vice presidents have come before Kamala Harris?
+  - title: If a person has a weight of 600 N, how much will they weigh on the Moon?
     options:
-      - text: 45
-      - text: 46
-      - text: 47
-      - text: 48
+      - text: 96 N
         correct: true
+      - text: 190 N
+      - text: 420 N
+      - text: 600 N
     image:
-      url: kamala-harris.jpg
-      flip: false
+      url: moon.jpg
 
-  - title: During one of the debates in October, what event drew attention to him?
-    preSubtitle: Mike Pence did not attend Trump's last event and the same week posted photos on social media reflecting on his time as VP, Trump not appearing in a single one. During one of the debates in October, what event drew attention to him?
+  - title: A 'dolly in' is…
     options:
-      - text: A fly landed on his head
+      - text: When the camera lens magnifies an image
+      - text: When the camera is mounted on a moving platform and approaches the subject
         correct: true
-      - text: He forgot Kamala’s name
-      - text: He got hit with a microphone
-      - text: He had a chipped tooth
+      - text: Using a special vest to achieve smooth handheld camera movement
+      - text: The camera is handheld
     image:
-      url: mike-pence-fly.jpg
+      url: dolly.jpg
+
+  - title: The shape of our milky way galaxy is…
+    options:
+      - text: Circular
+      - text: Elliptical
+      - text: Spiral
+        correct: true
+      - text: Glomous
+    image:
+      url: andromeda.jpg
+
+  - title: What does a barometer measure?
+    options:
+      - text: Humidity
+      - text: Air pressure
+        correct: true
+      - text: Static charge
+      - text: Smells
+    image:
+      url: barometer.jpg
+
+  - title: Julius Caesar was assassinated on 15 March 44 BC, a date now often known by what term?
+    options:
+      - text: Brutus’s bludgeoning
+      - text: The Ides of March
+        correct: true
+      - text: First new moon
+      - text: Magnus luctus
+    image:
+      url: ides-of-march.jpg
+
+  - title: Which horse won the first Grand National in 1839?
+    options:
+      - text: Jackpot
+      - text: Lottery
+        correct: true
+      - text: Chancer
+      - text: Treasure
+    image:
+      url: grandnational.jpg
+
+  - title: In which country is the Bay of Pigs?
+    options:
+      - text: Cuba
+        correct: true
+      - text: Vietnam
+      - text: USA
+      - text: France
+    image:
+      url: bayofpigs.jpg
       obscured: true
 
-  - title: Donald Trump is the first US President to be impeached twice. What was the reason for his first impeachment?
+  - title: High angle shots have the effect of…
     options:
-      - text: Tax evasion, after it was revealed he paid $750 of income tax
-      - text: Inciting violence after the BLM riots
-      - text: Coercion with a "quid pro quo" military aid package
+      - text: Making the subject seem powerful
+      - text: Making the subject seem powerless
         correct: true
-      - text: Providing Russian officials with classified information in the Oval Office
+      - text: Making the audience identify with a character
+      - text: Engaging the audience
     image:
-      url: trump-ukraine.jpg
-      flip: false
-      obscured: true
-
-  # Round 2 - Berlin history
-  - title: The allied forces occupied Berlin in 4 sectors. Checkpoint Charlie was a station between which forces?
-    options:
-      - text: United States and the Soviet Union
-        correct: true
-      - text: United States and Great Britain
-      - text: Great Britain and the Soviet Union
-      - text: France and Great Britain
-    image:
-      url: checkpoint-charlie.jpg
-      obscured: true
-
-  - title: Which river flows through Berlin?
-    options:
-      - text: The Rhine
-      - text: The Main
-      - text: The Spree
-        correct: true
-      - text: The Elbe
-    image:
-      url: spree.jpg
-      flip: false
-
-  - title: What was the Berliner Lüftbrücke?
-    options:
-      - text: A currency introduced in East Germany during Soviet occupation
-      - text: The delivery of supplies to West Berlin during the Cold War
-        correct: true
-      - text: The name given to the fall of the Berlin Wall in 1989
-      - text: An unconstitutional tariff on imports from West Berlin to East Berlin
-    image:
-      url: lueftbruecker.jpg
-      flip: false
-      obscured: true
-
-  - title: Which of these facts about the GDR is not true?
-    options:
-      - text: Jeans were prohibited until the 1970s
-      - text: Women were given financial incentives to have children (Hausfraugeld)
-        correct: true
-      - text: One in 90 East Germans worked unofficially for the secret police
-      - text: It took up to 15 years to get the opportunity to buy a car
-    image:
-      url: ddr.jpg
-      flip: false
-
-  # Round 3 - Movie quotes
-  - title: “You had me at ‘hello’.”
-    options:
-      - text: Jerry Maguire
-        correct: true
-      - text: Notting Hill
-      - text: When Harry Met Sally
-      - text: The Notebook
-    image:
-      url: jerry.jpg
-      flip: false
-      obscured: true
-
-  - title: “Frankly, my dear, I don’t give a damn.”
-    options:
-      - text: Gone With The Wind
-        correct: true
-      - text: Some Like It Hot
-      - text: Casablanca
-      - text: The Help
-    image:
-      url: gone-with-the-wind.jpg
-      flip: false
-      obscured: true
-
-  - title: “Hasta la vista, baby.”
-    options:
-      - text: Kindergarten Cop
-      - text: Commando
-      - text: Terminator 2
-        correct: true
-      - text: Predator
-    image:
-      url: terminator.jpg
+      url: robot.png
       flip: true
-      obscured: true
 
-  - title: “To infinity and beyond!”
+  - title: Which English king died in 1066, leaving no heir to the throne?
     options:
-      - text: Toy Story
-        correct: true
-      - text: Apollo 18
-      - text: Dora the Explorer
-      - text: For All Mankind
-    image:
-      url: buzz.jpg
-      flip: false
-      obscured: true
-
-  # Round 4
-  - title: Guess the movie
-    options:
-      - text: Bridget Jones
-      - text: Mamma mia
-        correct: true
-      - text: The World’s End
-      - text: The Island
-    image:
-      url: mamma-mia.jpg
-      flip: false
-
-  - title: Guess the movie
-    options:
-      - text: Princess Diaries
-        correct: true
-      - text: The Devil Wears Prada
-      - text: Ella Enchanted
-      - text: The Assistant
-    image:
-      url: princess-diaries.jpg
-      flip: false
-
-  - title: Guess the movie
-    options:
-      - text: Wolverine
-      - text: The Magician
-      - text: Magic Mike
-      - text: The Greatest Showman
+      - text: Jamestown
+      - text: Plymouth Rock
+      - text: New York
+      - text: Roanoke Island
         correct: true
     image:
-      url: greatest-showman.jpg
-      flip: false
+      url: robot.png
+      flip: true
 
-  - title: Guess the movie
+  - title: What were the four humours that the ancient Greeks believed made up the body and determined illness?
     options:
-      - text: Forrest Gump
+      - text: Water, blood, bile, pus
+      - text: Blood, phlegm, black bile, yellow bile
         correct: true
-      - text: My Girl
-      - text: Matilda
-      - text: The Terminal
+      - text: Water, blood, phlegm, bile
+      - text: Wind, air, heat, water
     image:
-      url: forrest-gump.jpg
-      flip: false
+      url: greece.jpg
 
-  # Round 5 - Random facts
-  - title: What is Barbie’s full name?
+  - title: Which part of Berlin was enclosed by the wall?
     options:
-      - text: Miss Barbie
-      - text: Princess Barbara II
-      - text: Barbara Hannah Stacey
-      - text: Barbara Millicent Roberts
+      - text: The centre
+      - text: The east
+      - text: The west
         correct: true
+      - text: All of it
     image:
-      url: barbie.jpg
-      flip: false
-
-  - title: When do horses start walking after being born?
-    options:
-      - text: Immediately
-      - text: Around 2 hours
-        correct: true
-      - text: Around 2 days
-      - text: Around 2 weeks
-    image:
-      url: horse.jpg
-      flip: false
-
-  - title: How many breaths on average does a human take in a day?
-    options:
-      - text: Roughly 2,000
-      - text: Roughly 8,000
-      - text: Roughly 20,000
-        correct: true
-      - text: Roughly 80,000
-    image:
-      url: yoga.jpg
-      flip: false
-
-  - title: Which of these facts is false?
-    options:
-      - text: There are 278 ways to make £1 with coins
-        correct: true
-      - text: The eye of an ostrich is bigger than its brain
-      - text: Pigeons cannot fart
-      - text: Tiramisu translates to ‘pick me up’ in Italian
-    image:
-      url: coins.jpg
-      flip: false
-      obscured: true
-
-  # Round 6 - tech
-  - title: How is 5G different to 4G?
-    options:
-      - text: It uses less energy
-      - text: It transmits disease
-      - text: It uses a higher frequency
-        correct: true
-      - text: It uses a lower frequency
-    image:
-      url: 5g.webp
-      flip: false
-
-  - title: What does open source mean?
-    options:
-      - text: Software that is maintained by volunteers
-        correct: true
-      - text: A port that accepts a cable in any orientation (reversible)
-      - text: Ketchup that has had the seal broken
-      - text: An app that doesn’t cost money to use
-    image:
-      url: tech.webp
-      flip: false
-
-  - title: How many bits are there in a megabyte?
-    options:
-      - text: 8,000,000
-        correct: true
-      - text: 1,024,000
-      - text: 1,000,000
-      - text: 4,096,000
-    image:
-      url: data.webp
-      flip: false
-
-  - title: Why is Big Data important?
-    options:
-      - text: Because it is structured
-      - text: Because of its complexity
-      - text: Because it can reveal patterns and trends
-        correct: true
-      - text: Because of its size
-    image:
-      url: big-data.jpg
-      flip: false
+      url: berlin-wall.jpg
