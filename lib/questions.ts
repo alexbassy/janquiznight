@@ -1,8 +1,11 @@
 import { nanoid } from 'nanoid'
 // @ts-ignore
 import allQuestions from './questions.yaml'
+// @ts-ignore
+import allPlayers from './players.yaml'
 
 const questions: IQuestion[] = allQuestions.questions
+const players: IPlayer[] = allPlayers.people
 
 export interface IQuestionOption {
   id: string
@@ -24,8 +27,14 @@ export interface IQuestion {
   image: IQuestionImage
 }
 
+export interface IPlayer {
+  name: string
+  score: number
+  image: string
+}
+
 // Add unique IDs for easy use inside React lists
-const withIDs = questions.map((question, i) => ({
+export const questionsWithIDs = questions.map((question, i) => ({
   ...question,
   id: nanoid(),
   count: i + 1,
@@ -42,4 +51,9 @@ const withIDs = questions.map((question, i) => ({
   },
 }))
 
-export default withIDs
+const playersWithIDs = players.map((player, i) => ({
+  ...player,
+  id: nanoid(),
+}))
+
+export { questionsWithIDs as questions, playersWithIDs as players }

@@ -172,7 +172,7 @@ questions:
       url: robot.png
       flip: true
 
-  - title: Which English king died in 1066, leaving no heir to the throne?
+  - title: What was the first English colony in the Americas?
     options:
       - text: Jamestown
       - text: Plymouth Rock

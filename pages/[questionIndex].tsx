@@ -3,13 +3,47 @@ import { useRouter } from 'next/router'
 import { Slide } from '../components/slide/organisms'
 import { PresentationContainer } from '../components/slide/atoms'
 import Layout from '../components/Layout'
-import questions from '../lib/questions'
+import Scores, { IScoresState, IScores } from '../components/Scores'
+import { questions, players } from '../lib/questions'
+
+const CACHE_KEY = 'scores'
+
+function saveScoresToCatch(scores: IScoresState): void {
+  localStorage.setItem(CACHE_KEY, JSON.stringify(scores))
+}
+
+function getScoresFromCache(): IScoresState {
+  try {
+    const result = JSON.parse(localStorage.getItem(CACHE_KEY) || '')
+    if (result && Object.keys(result).length) {
+      return result as IScoresState
+    }
+    return {}
+  } catch (e) {
+    return {}
+  }
+}
+
+interface IScoresState {
+  [id: string]: IScores
+}
 
 const Question = () => {
   const router = useRouter()
   const { questionIndex } = router.query
   const [isAnswerShown, setIsAnswerShown] = useState(false)
   const [isPhotoShown, setIsPhotoShown] = useState(false)
+  const [scores, setScores] = useState<IScoresState>(getScoresFromCache())
+
+  const handleSetScore = (questionId: string, scores: IScores) => {
+    setScores((currentScores) => {
+      console.log(currentScores)
+      const newScores = { ...(currentScores || {}) }
+      newScores[questionId] = scores
+      saveScoresToCatch(newScores)
+      return newScores
+    })
+  }
 
   // Get question ID from path
   const id = Number(questionIndex)
@@ -72,6 +106,11 @@ const Question = () => {
             isAnswerShown={isAnswerShown}
             isPhotoShown={isPhotoShown}
             isAnimated
+          />
+          <Scores
+            questionId={activeQuestion.image.url}
+            scores={scores || {}}
+            onSetScores={handleSetScore}
           />
         </PresentationContainer>
       </main>

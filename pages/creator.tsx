@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import Image from 'next/image'
 import SlideEditor from '../components/SlideEditor'
 import CreatorLayout from '../components/CreatorLayout'
-import questions, { IQuestion, IQuestionOption } from '../lib/questions'
+import { questions, IQuestion, IQuestionOption } from '../lib/questions'
 import { useState } from 'react'
 import { css } from '@emotion/react'
 

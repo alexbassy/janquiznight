@@ -5,6 +5,7 @@ import NextImage from 'next/image'
 import { motion } from 'framer-motion'
 
 export const PresentationContainer = styled.div`
+  position: relative;
   display: flex;
   width: 100vw;
   height: 100vh;
