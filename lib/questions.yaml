@@ -1,204 +1,151 @@
 questions:
-  - title: What is considered the world’s oldest writing system?
+  - title: Which of these should someone with celiac’s disease not enjoy?
     options:
-      - text: Hieroglyphics
-      - text: Chinese
-      - text: Proto-Indo-European
-      - text: Cuneiform
+      - text: Eton mess
+      - text: Angel delight
+      - text: Spotted dick
         correct: true
+      - text: Rice pudding
     image:
-      url: cuneiform.jpg
+      url: jelly.jpg
 
-  - title: What language is “家庭”?
+  - title: Adele is back after her 6 year music hiatus with “Go easy on me”. Which of these is not an Adele song?
     options:
-      - text: Korean
-      - text: Japanese
-      - text: Chinese
+      - text: Goodbye
         correct: true
-      - text: Italian
+      - text: Remedy
+      - text: Someone Like You
+      - text: Set Fire to the Rain
     image:
-      url: two.jpg
+      url: adele.jpg
 
-  - title: How does a vector image differ from a raster image?
+  - title: What houseplant is pictured here?
     options:
-      - text: Vectors are infinitely scalable
-        correct: true
-      - text: Raster images are infinitely scalable
-      - text: Raster images allow more colours than vector images
-      - text: Vector images can be transparent
-    image:
-      url: vector.jpg
-
-  - title: How do you ask someone’s name in French?
-    options:
-      - text: Quel est ton numéro?
-      - text: Comment tu t’apelles?
-        correct: true
-      - text: Comment va ton poulet?
-      - text: Cómo te llamas?
-    image:
-      url: one.jpg
-
-  - title: Frankie Dettori famously won 7 races out of 7 races at which race course in 1995?
-    options:
-      - text: Ascot
-        correct: true
-      - text: Aintree
-      - text: Newmarket
-      - text: Salisbury
-    image:
-      url: horse-race.jpg
-
-  - title: Which of these colours is unlucky in Chinese culture?
-    options:
-      - text: White
-        correct: true
-      - text: Red
-      - text: Blue
-      - text: Black
-    image:
-      url: dice.jpg
-
-  - title: Bottle is a slang word for what number?
-    options:
-      - text: 0
-      - text: 1
-      - text: 2
-        correct: true
-      - text: 3
-    image:
-      url: bottle.jpg
-
-  - title: Which of these is germination?
-    options:
-      - text: Movement of water from roots up to the leaves
-      - text: Dispersal of seeds into soil
-      - text: Not washing hands after going to the bathroom
-      - text: First outward signs of growth of a seed
+      - text: Peperomia
+      - text: Philodendron
+      - text: Pothos
+      - text: Calathea
         correct: true
     image:
-      url: plants.jpg
-
-  - title: What is a plant called that sheds its leaves before winter, or during a dry spell?
-    options:
-      - text: Deciduous
-        correct: true
-      - text: Evergreen
-      - text: Recessive
-      - text: Indehiscent
-    image:
-      url: leaves.jpg
+      url: calathea.jpg
       flip: true
 
-  - title: If a person has a weight of 600 N, how much will they weigh on the Moon?
+  - title: What takes place in the story of Eid-al-Fitr?
     options:
-      - text: 96 N
+      - text: Muhammad finishes his journey to Medina
+      - text: The sacrifice of Ibrahim’s son
         correct: true
-      - text: 190 N
-      - text: 420 N
-      - text: 600 N
+      - text: Musa’s exile from Egypt
+      - text: The birth of Isa
     image:
-      url: moon.jpg
+      url: goat.jpg
 
-  - title: A 'dolly in' is…
+  - title: What do Diwali, Las Fallas, Vivid Sidney, and Signal Festival all have in common?
     options:
-      - text: When the camera lens magnifies an image
-      - text: When the camera is mounted on a moving platform and approaches the subject
+      - text: They all take place on the same day in 2022
+      - text: They are all celebrated in the southern hemisphere
+      - text: They are all music festivals
+      - text: They are all festivals of light
         correct: true
-      - text: Using a special vest to achieve smooth handheld camera movement
-      - text: The camera is handheld
     image:
-      url: dolly.jpg
+      url: vivid.jpg
 
-  - title: The shape of our milky way galaxy is…
+  - title: Which of these is not a financial instrument?
     options:
-      - text: Circular
-      - text: Elliptical
-      - text: Spiral
+      - text: Derivatives
+      - text: Indices
         correct: true
-      - text: Glomous
+      - text: Vertices
+      - text: Bonds
     image:
-      url: andromeda.jpg
+      url: finance.jpg
 
-  - title: What does a barometer measure?
+  - title: NVIDIA’s market cap has grown 86% in the last year. What does NVIDIA do?
     options:
-      - text: Humidity
-      - text: Air pressure
+      - text: Graphics technology
         correct: true
-      - text: Static charge
-      - text: Smells
+      - text: Computer games
+      - text: Autonomous cars
+      - text: Renewable energy
     image:
-      url: barometer.jpg
+      url: nvidia.jpg
 
-  - title: Julius Caesar was assassinated on 15 March 44 BC, a date now often known by what term?
+  - title: The most valuable company in the world is worth almost £2 trillion. What kind of business is it?
     options:
-      - text: Brutus’s bludgeoning
-      - text: The Ides of March
+      - text: Oil
+      - text: Social media
+      - text: Supermarkets
+      - text: Computers
         correct: true
-      - text: First new moon
-      - text: Magnus luctus
     image:
-      url: ides-of-march.jpg
+      url: money.jpg
 
-  - title: Which horse won the first Grand National in 1839?
+  - title: 30 years from now, which of these might not be on our plate?
     options:
-      - text: Jackpot
-      - text: Lottery
+      - text: Insects
+      - text: Bananas
         correct: true
-      - text: Chancer
-      - text: Treasure
+      - text: Farmed meat
+      - text: Lemons
     image:
-      url: grandnational.jpg
+      url: meal.jpg
 
-  - title: In which country is the Bay of Pigs?
+  - title:
     options:
-      - text: Cuba
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Vietnam
-      - text: USA
-      - text: France
     image:
-      url: bayofpigs.jpg
-      obscured: true
+      url: .jpg
 
-  - title: High angle shots have the effect of…
+  - title:
     options:
-      - text: Making the subject seem powerful
-      - text: Making the subject seem powerless
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Making the audience identify with a character
-      - text: Engaging the audience
     image:
-      url: robot.png
-      flip: true
+      url: .jpg
 
-  - title: What was the first English colony in the Americas?
+  - title:
     options:
-      - text: Jamestown
-      - text: Plymouth Rock
-      - text: New York
-      - text: Roanoke Island
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
     image:
-      url: robot.png
-      flip: true
+      url: .jpg
 
-  - title: What were the four humours that the ancient Greeks believed made up the body and determined illness?
+  - title:
     options:
-      - text: Water, blood, bile, pus
-      - text: Blood, phlegm, black bile, yellow bile
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Water, blood, phlegm, bile
-      - text: Wind, air, heat, water
     image:
-      url: greece.jpg
+      url: .jpg
 
-  - title: Which part of Berlin was enclosed by the wall?
+  - title:
     options:
-      - text: The centre
-      - text: The east
-      - text: The west
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: All of it
     image:
-      url: berlin-wall.jpg
+      url: .jpg
+
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+      - text:
+        correct: true
+    image:
+      url: .jpg
