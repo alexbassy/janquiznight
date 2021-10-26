@@ -33,8 +33,9 @@ export const TextWrapper = styled(motion.section)`
 `
 
 export const Title = styled(motion.h1)`
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin: 0.5em 0;
+  font-weight: 800;
 `
 
 export const Count = styled(motion.span)`
@@ -93,7 +94,7 @@ export const Answer = styled.div<IAnswer>`
       css`
         color: #ffffff;
         background-color: #28bb2e;
-        box-shadow: 0 0 20px #28bb2e85;
+        box-shadow: 0 0 20px #28bb2e85, 0 0 60px #28bb2e50;
       `}
   }
 
