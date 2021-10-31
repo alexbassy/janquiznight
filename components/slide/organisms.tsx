@@ -25,7 +25,7 @@ export function Slide(props: ISlideProps) {
     isPhotoShown,
     title,
     options,
-    isAnimated,
+    isAnimated, // False when in creator view
   } = props
   return (
     <IsAnimatedContext.Provider value={Boolean(isAnimated)}>

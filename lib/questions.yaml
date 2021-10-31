@@ -90,6 +90,97 @@ questions:
     image:
       url: meal.jpg
 
+  - title: What is the most commonly used system for representing numbers?
+    options:
+      - text: Hindu-Arabic numeral system
+        correct: true
+      - text: Western Standard numeral system
+      - text: Latin numeral system
+      - text: Chinese numeral system
+    image:
+      url: numbers.jpg
+
+  - title: What is the name of Andy’s neighbor in Toy Story?
+    options:
+      - text: Buster
+      - text: Dudley
+      - text: Sid
+        correct: true
+      - text: Bruce
+    image:
+      url: sid.webp
+
+  - title: Which of these is not a timezone in continental US?
+    options:
+      - text: Eastern
+      - text: Mountain
+      - text: Midwestern
+        correct: true
+      - text: Pacific
+    image:
+      url: .jpg
+
+  - title: Who killed Bellatrix Lestrange in the last Harry Potter book?
+    options:
+      - text: Molly Weasely
+        correct: true
+      - text: Luna Lovegood
+      - text: Hermione Granger
+      - text: Dobby the house elf
+    image:
+      url: bellatrix.jpg
+
+  - title: The Queen has had over 30 corgis during her reign. What was the name of her first dog?
+    options:
+      - text: Monty
+      - text: Candy
+      - text: Susan
+        correct: true
+      - text: Poodlepops
+    image:
+      url: corgi.jpg
+
+  - title: What is the name of this iconic IKEA chair?
+    options:
+      - text: BRIMNES
+      - text: POÄNG
+        correct: true
+      - text: BILLY
+      - text: KLIPPAN
+    image:
+      url: poaeng.jpg
+      flipped: true
+
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+      - text:
+        correct: true
+    image:
+      url: .jpg
+
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+      - text:
+        correct: true
+    image:
+      url: .jpg
+
+  - title:
+    options:
+      - text:
+      - text:
+      - text:
+      - text:
+        correct: true
+    image:
+      url: .jpg
+
   - title:
     options:
       - text:
