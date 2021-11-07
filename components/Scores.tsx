@@ -1,16 +1,7 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { IPlayer, players } from '../lib/questions'
-
-export interface IScores {
-  [name: string]: number
-}
-
-export interface IScoresState {
-  [id: string]: IScores
-}
+import { RoundState, ScoresState } from '@/lib/scores'
+import { IPlayer, players } from '@/lib/questions'
 
 export const Wrap = styled(motion.ul)`
   display: flex;
@@ -18,20 +9,46 @@ export const Wrap = styled(motion.ul)`
   right: 2rem;
   bottom: 1rem;
   list-style: none;
+  z-index: 2;
 `
 
 export const Item = styled(motion.li)`
+  --size: 2.25rem;
+
   margin-left: 0.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
 `
 
 export const Avatar = styled.img`
-  width: 50px;
-  height: 50px;
+  width: var(--size);
+  height: var(--size);
   border-radius: 50%;
   border: 3px solid white;
+`
+
+export const Tick = styled.span`
+  ::before {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '✔';
+    background-color: #26c944;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.25s ease;
+    opacity: ${(props) => (props.isShown ? 0.7 : 0)};
+    transform: ${(props) => (props.isShown ? 'scale(1)' : 'scale(1.5)')};
+  }
 `
 
 export const Amount = styled.span`
@@ -39,44 +56,37 @@ export const Amount = styled.span`
 `
 
 interface IScoresProps {
-  questionId: string
-  scores: IScoresSate
-  onSetScores: (questionId: string, newScores: IScores) => void
+  round: RoundState
+  onSetScores: React.Dispatch<React.SetStateAction<RoundState>>
 }
 
-const Scores: React.FC<IScoresProps> = ({
-  questionId,
-  scores,
-  onSetScores,
-}) => {
+const Scores: React.FC<IScoresProps> = ({ round, onSetScores }) => {
   const onClick = (player: IPlayer) => {
-    const score = scores[player.name] || 0
+    const score = round[player.name]
     const newScores = {
-      ...scores,
-      [player.name]: score === 0 ? 1 : 0,
+      ...round,
+      [player.name]: score === 1 ? 0 : 1,
     }
-    onSetScores(questionId, newScores)
+    onSetScores(newScores)
   }
 
   return (
     <Wrap>
       {players.map((player) => {
+        const didScore = round[player.name] === 1
         return (
-          <Item key={player.id}>
-            <Amount>
-              {Object.values(scores).reduce((accum, score) => {
-                return accum + (score[player.name] || 0)
-              }, 0)}
-            </Amount>
-            <Avatar
-              src={`/players/${player.image}`}
-              onClick={() => onClick(player)}
-            />
+          <Item key={player.id} onClick={() => onClick(player)}>
+            <Avatar src={`/players/${player.image}`} />
+            <Tick isShown={didScore} />
           </Item>
         )
       })}
     </Wrap>
   )
+}
+
+Scores.defaultProps = {
+  round: {},
 }
 
 export default Scores

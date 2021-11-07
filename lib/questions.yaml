@@ -1,4 +1,38 @@
 questions:
+
+  # NUTRITION
+
+  - title: 20 years from now, which of these might not be on our plate?
+    options:
+      - text: Insects
+      - text: Bananas
+        correct: true
+      - text: Farmed meat
+      - text: Lemons
+    image:
+      url: meal.jpg
+
+  - title: Which of these is not a main ingredient in plant fertlizer?
+    options:
+      - text: Phosphorus
+      - text: Potassium
+      - text: Sulfur
+        correct: true
+      - text: Nitrogen
+    image:
+      url: soil.jpg
+
+  - title: Which plant does saffron come from?
+    options:
+      - text: Crocus
+        correct: true
+      - text: Yellow iris
+      - text: Gladiolus
+      - text: Verum tree
+    image:
+      url: crocus.jpg
+      flipped: true
+
   - title: Which of these should someone with celiac’s disease not enjoy?
     options:
       - text: Eton mess
@@ -8,16 +42,6 @@ questions:
       - text: Rice pudding
     image:
       url: jelly.jpg
-
-  - title: Adele is back after her 6 year music hiatus with “Go easy on me”. Which of these is not an Adele song?
-    options:
-      - text: Goodbye
-        correct: true
-      - text: Remedy
-      - text: Someone Like You
-      - text: Set Fire to the Rain
-    image:
-      url: adele.jpg
 
   - title: What houseplant is pictured here?
     options:
@@ -30,7 +54,61 @@ questions:
       url: calathea.jpg
       flip: true
 
-  - title: What takes place in the story of Eid-al-Fitr?
+  # FINANCE
+
+  - title: Which of these is not a financial instrument?
+    options:
+      - text: Derivatives
+      - text: Indices
+      - text: Vertices
+        correct: true
+      - text: Bonds
+    image:
+      url: finance.jpg
+
+  - title: NVIDIA’s market cap has almost doubled in the last year. What does NVIDIA do?
+    options:
+      - text: Graphics technology
+        correct: true
+      - text: Pharmaceuticals
+      - text: Autonomous cars
+      - text: Renewable energy
+    image:
+      url: nvidia.jpg
+
+  - title: Where does “Wall Street” get its name?
+    options:
+      - text: A walnut tree in Manhattan where traders first congregated
+      - text: Garret D. Wall, a U.S. Senator from New Jersey
+      - text: The Wall Street Journal
+      - text: A wooden wall built by Dutch Colonists
+        correct: true
+    image:
+      url: wallstreet.jpg
+  
+  - title: Who wrote “in this world nothing can be said to be certain, except death and taxes?”
+    options:
+      - text: Alexander Hamilton
+      - text: Benjamin Franklin
+        correct: true
+      - text: William Shakespeare
+      - text: Tony Blair
+    image:
+      url: graveyard.jpg
+  
+  - title: Which of these companies is not in the FTSE 100?
+    options:
+      - text: British American Tobacco
+      - text: AstraZeneca
+      - text: Sainsbury’s
+      - text: Dyson
+        correct: true
+    image:
+      url: bank-of-england.jpg
+
+  # HISTORY AND CULTURE
+
+  - title: Which of these takes place in the story of Eid-al-Fitr?
     options:
       - text: Muhammad finishes his journey to Medina
       - text: The sacrifice of Ibrahim’s son
@@ -50,46 +128,6 @@ questions:
     image:
       url: vivid.jpg
 
-  - title: Which of these is not a financial instrument?
-    options:
-      - text: Derivatives
-      - text: Indices
-        correct: true
-      - text: Vertices
-      - text: Bonds
-    image:
-      url: finance.jpg
-
-  - title: NVIDIA’s market cap has grown 86% in the last year. What does NVIDIA do?
-    options:
-      - text: Graphics technology
-        correct: true
-      - text: Computer games
-      - text: Autonomous cars
-      - text: Renewable energy
-    image:
-      url: nvidia.jpg
-
-  - title: The most valuable company in the world is worth almost £2 trillion. What kind of business is it?
-    options:
-      - text: Oil
-      - text: Social media
-      - text: Supermarkets
-      - text: Computers
-        correct: true
-    image:
-      url: money.jpg
-
-  - title: 30 years from now, which of these might not be on our plate?
-    options:
-      - text: Insects
-      - text: Bananas
-        correct: true
-      - text: Farmed meat
-      - text: Lemons
-    image:
-      url: meal.jpg
-
   - title: What is the most commonly used system for representing numbers?
     options:
       - text: Hindu-Arabic numeral system
@@ -99,6 +137,29 @@ questions:
       - text: Chinese numeral system
     image:
       url: numbers.jpg
+
+  - title: What did Guy Fawkes say his name was when he was caught?
+    options:
+      - text: John Johnson
+        correct: true
+      - text: Dick Dickson
+      - text: Peter Peterson
+      - text: Tom Thomson
+    image:
+      url: guy.jpg
+      flipped: true
+
+  - title: Where was the document signed that set of terms of peace following WWI?
+    options:
+      - text: Vienna
+      - text: Versailles
+        correct: true
+      - text: Berlin
+      - text: Paris
+    image:
+      url: versailles.jpg
+
+  # FILM AND LITERATURE
 
   - title: What is the name of Andy’s neighbor in Toy Story?
     options:
@@ -110,25 +171,102 @@ questions:
     image:
       url: sid.webp
 
-  - title: Which of these is not a timezone in continental US?
-    options:
-      - text: Eastern
-      - text: Mountain
-      - text: Midwestern
-        correct: true
-      - text: Pacific
-    image:
-      url: .jpg
-
   - title: Who killed Bellatrix Lestrange in the last Harry Potter book?
     options:
-      - text: Molly Weasely
+      - text: Molly Weasley
         correct: true
       - text: Luna Lovegood
       - text: Hermione Granger
       - text: Dobby the house elf
     image:
       url: bellatrix.jpg
+
+  - title: In Edgar Allen Poe’s, “The Raven”, what does the raven keep saying
+    options:
+      - text: Inside
+      - text: Nevermore
+        correct: true
+      - text: Hope
+      - text: Prophet
+    image:
+      url: raven.jpg
+
+  - title: Which is the odd film out?
+    options:
+      - text: Creed
+      - text: Rocky
+      - text: Die Hard
+        correct: true
+      - text: The Expendables
+    image:
+      url: movie.jpg
+
+  - title: Poseidon is the god of the sea and what else?
+    options:
+      - text: Rain
+      - text: Fish
+      - text: Sand
+      - text: Earthquakes
+        correct: true
+    image:
+      url: movie.jpg
+  
+  # MUSIC
+
+  - title: Which of these keys is B-Flat?
+    options:
+      - text: 1
+      - text: 2
+      - text: 3
+        correct: true
+      - text: 4
+    image:
+      url: b-flat.jpg
+
+  - title: Which country has won Eurovision the most times?
+    options:
+      - text: Ireland
+        correct: true
+      - text: Sweden
+      - text: France
+      - text: Italy
+    image:
+      url: eurovision.jpg
+
+  - title: Adele is back after her 6 year music hiatus with “Go easy on me”. Which of these is not an Adele song?
+    options:
+      - text: Goodbye
+        correct: true
+      - text: Remedy
+      - text: Someone Like You
+      - text: Set Fire to the Rain
+    image:
+      url: adele.jpg
+
+  - title: What is the stage name of Anna Mae Bullock?
+    options:
+      - text: Cher
+      - text: Lady Gaga
+      - text: Tina Turner
+        correct: true
+      - text: Kelis
+    image:
+      url: tina.jpg
+      flip: true
+      obscured: true
+
+  - title: What song was the first YouTube video to be viewed 1 billion times?
+    options:
+      - text: Hit Me Baby One More Time - Britney Spears
+      - text: Despacito - Luis Fonsi
+      - text: Gangnam Style - PSY
+      - text: Baby - Justin Bieber
+        correct: true
+    image:
+      url: gangnam.jpg
+      obscured: true
+
+  # GENERAL KNOWLEDGE
 
   - title: The Queen has had over 30 corgis during her reign. What was the name of her first dog?
     options:
@@ -149,57 +287,8 @@ questions:
       - text: KLIPPAN
     image:
       url: poaeng.jpg
-      flipped: true
+      flip: true
 
-  - title:
-    options:
-      - text:
-      - text:
-      - text:
-      - text:
-        correct: true
-    image:
-      url: .jpg
-
-  - title:
-    options:
-      - text:
-      - text:
-      - text:
-      - text:
-        correct: true
-    image:
-      url: .jpg
-
-  - title:
-    options:
-      - text:
-      - text:
-      - text:
-      - text:
-        correct: true
-    image:
-      url: .jpg
-
-  - title:
-    options:
-      - text:
-      - text:
-      - text:
-      - text:
-        correct: true
-    image:
-      url: .jpg
-
-  - title:
-    options:
-      - text:
-      - text:
-      - text:
-      - text:
-        correct: true
-    image:
-      url: .jpg
 
   - title:
     options:

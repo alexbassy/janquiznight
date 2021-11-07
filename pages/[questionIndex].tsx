@@ -1,46 +1,39 @@
-import { useCallback, useState, useEffect } from 'react'
+import {
+  useCallback,
+  useState,
+  useEffect,
+  SetStateAction,
+  Dispatch,
+} from 'react'
 import { useRouter } from 'next/router'
 import { Slide } from '../components/slide/organisms'
 import { PresentationContainer } from '../components/slide/atoms'
 import Layout from '../components/Layout'
-import Scores, { IScoresState, IScores } from '../components/Scores'
+import Scores from '../components/Scores'
 import { questions, players } from '../lib/questions'
-
-const CACHE_KEY = 'scores'
-
-function saveScoresToCatch(scores: IScoresState): void {
-  localStorage.setItem(CACHE_KEY, JSON.stringify(scores))
-}
-
-function getScoresFromCache(): IScoresState {
-  try {
-    const result = JSON.parse(localStorage.getItem(CACHE_KEY) || '')
-    if (result && Object.keys(result).length) {
-      return result as IScoresState
-    }
-    return {}
-  } catch (e) {
-    return {}
-  }
-}
-
-interface IScoresState {
-  [id: string]: IScores
-}
+import {
+  getScoresFromCache,
+  RoundState,
+  saveScoresToCache,
+  ScoresState,
+} from '@/lib/scores'
 
 const Question = () => {
   const router = useRouter()
   const { questionIndex } = router.query
   const [isAnswerShown, setIsAnswerShown] = useState(false)
   const [isPhotoShown, setIsPhotoShown] = useState(false)
-  const [scores, setScores] = useState<IScoresState>(getScoresFromCache())
+  const [scores, setScores] = useState<ScoresState>(getScoresFromCache())
 
-  const handleSetScore = (questionId: string, scores: IScores) => {
+  const handleSetScore = (scores: RoundState) => {
     setScores((currentScores) => {
-      console.log(currentScores)
-      const newScores = { ...(currentScores || {}) }
-      newScores[questionId] = scores
-      saveScoresToCatch(newScores)
+      if (typeof questionIndex === 'undefined') {
+        return currentScores
+      }
+
+      const newScores = { ...currentScores } || {}
+      newScores[questionIndex.toString()] = scores
+      saveScoresToCache(newScores)
       return newScores
     })
   }
@@ -108,8 +101,8 @@ const Question = () => {
             isAnimated
           />
           <Scores
-            questionId={activeQuestion.image.url}
-            scores={scores || {}}
+            questionId={activeQuestion.id}
+            round={scores?.[questionIndex!.toString()] || {}}
             onSetScores={handleSetScore}
           />
         </PresentationContainer>
