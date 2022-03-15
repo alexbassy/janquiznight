@@ -1,278 +1,151 @@
 questions:
-  # Round 1 - US news
-  - title: President Joe Biden signed 15 executive orders on his first day in office. Which of these was not one of them?
+  - title: Which of these should someone with celiac’s disease not enjoy?
     options:
-      - text: Mandatory mask wearing inside government buildings
-      - text: Rejoin the world health organisation
-      - text: Approved the green new deal
+      - text: Eton mess
+      - text: Angel delight
+      - text: Spotted dick
         correct: true
-      - text: Stopped the wall construction
+      - text: Rice pudding
     image:
-      url: joe-biden.jpg
+      url: jelly.jpg
+
+  - title: Adele is back after her 6 year music hiatus with “Go easy on me”. Which of these is not an Adele song?
+    options:
+      - text: Goodbye
+        correct: true
+      - text: Remedy
+      - text: Someone Like You
+      - text: Set Fire to the Rain
+    image:
+      url: adele.jpg
+
+  - title: What houseplant is pictured here?
+    options:
+      - text: Peperomia
+      - text: Philodendron
+      - text: Pothos
+      - text: Calathea
+        correct: true
+    image:
+      url: calathea.jpg
       flip: true
 
-  - title: If Donald Trump was the 45th president of the United States, how many vice presidents have come before Kamala Harris?
+  - title: What takes place in the story of Eid-al-Fitr?
     options:
-      - text: 45
-      - text: 46
-      - text: 47
-      - text: 48
+      - text: Muhammad finishes his journey to Medina
+      - text: The sacrifice of Ibrahim’s son
         correct: true
+      - text: Musa’s exile from Egypt
+      - text: The birth of Isa
     image:
-      url: kamala-harris.jpg
-      flip: false
+      url: goat.jpg
 
-  - title: During one of the debates in October, what event drew attention to him?
-    preSubtitle: Mike Pence did not attend Trump's last event and the same week posted photos on social media reflecting on his time as VP, Trump not appearing in a single one. During one of the debates in October, what event drew attention to him?
+  - title: What do Diwali, Las Fallas, Vivid Sidney, and Signal Festival all have in common?
     options:
-      - text: A fly landed on his head
+      - text: They all take place on the same day in 2022
+      - text: They are all celebrated in the southern hemisphere
+      - text: They are all music festivals
+      - text: They are all festivals of light
         correct: true
-      - text: He forgot Kamala’s name
-      - text: He got hit with a microphone
-      - text: He had a chipped tooth
     image:
-      url: mike-pence-fly.jpg
-      obscured: true
+      url: vivid.jpg
 
-  - title: Donald Trump is the first US President to be impeached twice. What was the reason for his first impeachment?
+  - title: Which of these is not a financial instrument?
     options:
-      - text: Tax evasion, after it was revealed he paid $750 of income tax
-      - text: Inciting violence after the BLM riots
-      - text: Coercion with a "quid pro quo" military aid package
+      - text: Derivatives
+      - text: Indices
         correct: true
-      - text: Providing Russian officials with classified information in the Oval Office
+      - text: Vertices
+      - text: Bonds
     image:
-      url: trump-ukraine.jpg
-      flip: false
-      obscured: true
+      url: finance.jpg
 
-  # Round 2 - Berlin history
-  - title: The allied forces occupied Berlin in 4 sectors. Checkpoint Charlie was a station between which forces?
+  - title: NVIDIA’s market cap has grown 86% in the last year. What does NVIDIA do?
     options:
-      - text: United States and the Soviet Union
+      - text: Graphics technology
         correct: true
-      - text: United States and Great Britain
-      - text: Great Britain and the Soviet Union
-      - text: France and Great Britain
+      - text: Computer games
+      - text: Autonomous cars
+      - text: Renewable energy
     image:
-      url: checkpoint-charlie.jpg
-      obscured: true
+      url: nvidia.jpg
 
-  - title: Which river flows through Berlin?
+  - title: The most valuable company in the world is worth almost £2 trillion. What kind of business is it?
     options:
-      - text: The Rhine
-      - text: The Main
-      - text: The Spree
+      - text: Oil
+      - text: Social media
+      - text: Supermarkets
+      - text: Computers
         correct: true
-      - text: The Elbe
     image:
-      url: spree.jpg
-      flip: false
+      url: money.jpg
 
-  - title: What was the Berliner Lüftbrücke?
+  - title: 30 years from now, which of these might not be on our plate?
     options:
-      - text: A currency introduced in East Germany during Soviet occupation
-      - text: The delivery of supplies to West Berlin during the Cold War
+      - text: Insects
+      - text: Bananas
         correct: true
-      - text: The name given to the fall of the Berlin Wall in 1989
-      - text: An unconstitutional tariff on imports from West Berlin to East Berlin
+      - text: Farmed meat
+      - text: Lemons
     image:
-      url: lueftbruecker.jpg
-      flip: false
-      obscured: true
+      url: meal.jpg
 
-  - title: Which of these facts about the GDR is not true?
+  - title:
     options:
-      - text: Jeans were prohibited until the 1970s
-      - text: Women were given financial incentives to have children (Hausfraugeld)
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: One in 90 East Germans worked unofficially for the secret police
-      - text: It took up to 15 years to get the opportunity to buy a car
     image:
-      url: ddr.jpg
-      flip: false
+      url: .jpg
 
-  # Round 3 - Movie quotes
-  - title: “You had me at ‘hello’.”
+  - title:
     options:
-      - text: Jerry Maguire
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Notting Hill
-      - text: When Harry Met Sally
-      - text: The Notebook
     image:
-      url: jerry.jpg
-      flip: false
-      obscured: true
+      url: .jpg
 
-  - title: “Frankly, my dear, I don’t give a damn.”
+  - title:
     options:
-      - text: Gone With The Wind
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Some Like It Hot
-      - text: Casablanca
-      - text: The Help
     image:
-      url: gone-with-the-wind.jpg
-      flip: false
-      obscured: true
+      url: .jpg
 
-  - title: “Hasta la vista, baby.”
+  - title:
     options:
-      - text: Kindergarten Cop
-      - text: Commando
-      - text: Terminator 2
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Predator
     image:
-      url: terminator.jpg
-      flip: true
-      obscured: true
+      url: .jpg
 
-  - title: “To infinity and beyond!”
+  - title:
     options:
-      - text: Toy Story
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
-      - text: Apollo 18
-      - text: Dora the Explorer
-      - text: For All Mankind
     image:
-      url: buzz.jpg
-      flip: false
-      obscured: true
+      url: .jpg
 
-  # Round 4
-  - title: Guess the movie
+  - title:
     options:
-      - text: Bridget Jones
-      - text: Mamma mia
-        correct: true
-      - text: The World’s End
-      - text: The Island
-    image:
-      url: mamma-mia.jpg
-      flip: false
-
-  - title: Guess the movie
-    options:
-      - text: Princess Diaries
-        correct: true
-      - text: The Devil Wears Prada
-      - text: Ella Enchanted
-      - text: The Assistant
-    image:
-      url: princess-diaries.jpg
-      flip: false
-
-  - title: Guess the movie
-    options:
-      - text: Wolverine
-      - text: The Magician
-      - text: Magic Mike
-      - text: The Greatest Showman
+      - text:
+      - text:
+      - text:
+      - text:
         correct: true
     image:
-      url: greatest-showman.jpg
-      flip: false
-
-  - title: Guess the movie
-    options:
-      - text: Forrest Gump
-        correct: true
-      - text: My Girl
-      - text: Matilda
-      - text: The Terminal
-    image:
-      url: forrest-gump.jpg
-      flip: false
-
-  # Round 5 - Random facts
-  - title: What is Barbie’s full name?
-    options:
-      - text: Miss Barbie
-      - text: Princess Barbara II
-      - text: Barbara Hannah Stacey
-      - text: Barbara Millicent Roberts
-        correct: true
-    image:
-      url: barbie.jpg
-      flip: false
-
-  - title: When do horses start walking after being born?
-    options:
-      - text: Immediately
-      - text: Around 2 hours
-        correct: true
-      - text: Around 2 days
-      - text: Around 2 weeks
-    image:
-      url: horse.jpg
-      flip: false
-
-  - title: How many breaths on average does a human take in a day?
-    options:
-      - text: Roughly 2,000
-      - text: Roughly 8,000
-      - text: Roughly 20,000
-        correct: true
-      - text: Roughly 80,000
-    image:
-      url: yoga.jpg
-      flip: false
-
-  - title: Which of these facts is false?
-    options:
-      - text: There are 278 ways to make £1 with coins
-        correct: true
-      - text: The eye of an ostrich is bigger than its brain
-      - text: Pigeons cannot fart
-      - text: Tiramisu translates to ‘pick me up’ in Italian
-    image:
-      url: coins.jpg
-      flip: false
-      obscured: true
-
-  # Round 6 - tech
-  - title: How is 5G different to 4G?
-    options:
-      - text: It uses less energy
-      - text: It transmits disease
-      - text: It uses a higher frequency
-        correct: true
-      - text: It uses a lower frequency
-    image:
-      url: 5g.webp
-      flip: false
-
-  - title: What does open source mean?
-    options:
-      - text: Software that is maintained by volunteers
-        correct: true
-      - text: A port that accepts a cable in any orientation (reversible)
-      - text: Ketchup that has had the seal broken
-      - text: An app that doesn’t cost money to use
-    image:
-      url: tech.webp
-      flip: false
-
-  - title: How many bits are there in a megabyte?
-    options:
-      - text: 8,000,000
-        correct: true
-      - text: 1,024,000
-      - text: 1,000,000
-      - text: 4,096,000
-    image:
-      url: data.webp
-      flip: false
-
-  - title: Why is Big Data important?
-    options:
-      - text: Because it is structured
-      - text: Because of its complexity
-      - text: Because it can reveal patterns and trends
-        correct: true
-      - text: Because of its size
-    image:
-      url: big-data.jpg
-      flip: false
+      url: .jpg
