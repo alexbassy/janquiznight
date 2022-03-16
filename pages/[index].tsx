@@ -56,31 +56,38 @@ const Question: React.FC<IQuestionsPageProps> = ({
     })
   }
 
+  const navigateToQuestion = useCallback(
+    (index: number) => {
+      router.push({ query: { index } })
+    },
+    [router],
+  )
+
   const onPrevious = useCallback(() => {
     if (isAnswerShown) {
       setIsAnswerShown(false)
     } else {
-      const previousQuestion = questionIndex - 1
+      const previousQuestion = questionIndex
       if (!questions[previousQuestion]) {
         return null
       }
       setIsPhotoShown(false)
-      router.push({ query: { index: questionIndex - 1 } })
+      navigateToQuestion(previousQuestion)
     }
-  }, [questionIndex, isAnswerShown, questions, router])
+  }, [questionIndex, isAnswerShown, questions, navigateToQuestion])
 
   const onNext = useCallback(() => {
     if (!isAnswerShown) {
       return setIsAnswerShown(true)
     }
-    const nextQuestion = questionIndex + 1
+    const nextQuestion = questionIndex + 2
     if (!questions[nextQuestion]) {
       return null
     }
-    router.push({ query: { index: questionIndex + 1 } })
+    navigateToQuestion(nextQuestion)
     setIsAnswerShown(false)
     setIsPhotoShown(false)
-  }, [questionIndex, isAnswerShown, questions, router])
+  }, [questionIndex, isAnswerShown, questions, navigateToQuestion])
 
   const onShowPicture = useCallback(() => {
     setIsPhotoShown((isPhotoShown) => !isPhotoShown)
