@@ -9,6 +9,8 @@ import { PresentationContainer } from '../components/slide/atoms'
 import Layout from '../components/Layout'
 import Scores, { IScoresState, IScores } from '../components/Scores'
 import { getQuestionsWithIds, getPlayersWithIDs, IQuestion, IPlayer } from '../lib/questions'
+import { useAtom } from 'jotai'
+import { scoresAtom } from '@/lib/scores.store'
 
 const CACHE_KEY = 'scores'
 
@@ -42,9 +44,21 @@ const Question: React.FC<IQuestionsPageProps> = ({
   players,
 }) => {
   const router = useRouter()
+  const [scores, setScores] = useAtom(scoresAtom)
   const [isAnswerShown, setIsAnswerShown] = useState(false)
   const [isPhotoShown, setIsPhotoShown] = useState(false)
-  const [scores, setScores] = useState<IScoresState>(getScoresFromCache())
+
+  useEffect(() => {
+    const cachedScores = getScoresFromCache()
+    const mappedToPlayers: IScores = players.reduce(
+      (accum, player) => ({ ...accum, [player.name]: cachedScores[player.name] || 0 }),
+      {},
+    )
+    const 
+    setScores(mappedToPlayers)
+  }, [players, setScores])
+
+  console.log({ scores })
 
   const handleSetScore = (questionId: string, scores: IScores) => {
     setScores((currentScores) => {
