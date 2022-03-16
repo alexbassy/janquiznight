@@ -1,8 +1,6 @@
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { IPlayer, players } from '../lib/questions'
+import { IPlayer } from '../lib/questions'
 
 export interface IScores {
   [name: string]: number
@@ -39,16 +37,13 @@ export const Amount = styled.span`
 `
 
 interface IScoresProps {
+  players: IPlayer[]
   questionId: string
-  scores: IScoresSate
+  scores: IScoresState
   onSetScores: (questionId: string, newScores: IScores) => void
 }
 
-const Scores: React.FC<IScoresProps> = ({
-  questionId,
-  scores,
-  onSetScores,
-}) => {
+const Scores: React.FC<IScoresProps> = ({ players, questionId, scores, onSetScores }) => {
   const onClick = (player: IPlayer) => {
     const score = scores[player.name] || 0
     const newScores = {
@@ -68,10 +63,7 @@ const Scores: React.FC<IScoresProps> = ({
                 return accum + (score[player.name] || 0)
               }, 0)}
             </Amount>
-            <Avatar
-              src={`/players/${player.image}`}
-              onClick={() => onClick(player)}
-            />
+            <Avatar src={`/players/${player.image}`} onClick={() => onClick(player)} />
           </Item>
         )
       })}

@@ -1,10 +1,14 @@
+import { promises as fs } from 'fs'
+import path from 'path'
+import yaml from 'js-yaml'
 import { useCallback, useState, useEffect } from 'react'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import { Slide } from '../components/slide/organisms'
 import { PresentationContainer } from '../components/slide/atoms'
 import Layout from '../components/Layout'
 import Scores, { IScoresState, IScores } from '../components/Scores'
-import { questions, players } from '../lib/questions'
+import { getQuestionsWithIds, getPlayersWithIDs, IQuestion, IPlayer } from '../lib/questions'
 
 const CACHE_KEY = 'scores'
 
@@ -24,13 +28,20 @@ function getScoresFromCache(): IScoresState {
   }
 }
 
-interface IScoresState {
-  [id: string]: IScores
+interface IQuestionsPageProps {
+  players: IPlayer[]
+  activeQuestion: IQuestion
+  questions: IQuestion[]
+  questionIndex: number
 }
 
-const Question = () => {
+const Question: React.FC<IQuestionsPageProps> = ({
+  questionIndex,
+  activeQuestion,
+  questions,
+  players,
+}) => {
   const router = useRouter()
-  const { questionIndex } = router.query
   const [isAnswerShown, setIsAnswerShown] = useState(false)
   const [isPhotoShown, setIsPhotoShown] = useState(false)
   const [scores, setScores] = useState<IScoresState>(getScoresFromCache())
@@ -45,35 +56,31 @@ const Question = () => {
     })
   }
 
-  // Get question ID from path
-  const id = Number(questionIndex)
-  const activeQuestion = questions[id]
-
   const onPrevious = useCallback(() => {
     if (isAnswerShown) {
       setIsAnswerShown(false)
     } else {
-      const previousQuestion = id - 1
+      const previousQuestion = questionIndex - 1
       if (!questions[previousQuestion]) {
         return null
       }
       setIsPhotoShown(false)
-      router.push({ query: { questionIndex: id - 1 } })
+      router.push({ query: { index: questionIndex - 1 } })
     }
-  }, [id, isAnswerShown])
+  }, [questionIndex, isAnswerShown, questions, router])
 
   const onNext = useCallback(() => {
     if (!isAnswerShown) {
       return setIsAnswerShown(true)
     }
-    const nextQuestion = id + 1
+    const nextQuestion = questionIndex + 1
     if (!questions[nextQuestion]) {
       return null
     }
-    router.push({ query: { questionIndex: id + 1 } })
+    router.push({ query: { index: questionIndex + 1 } })
     setIsAnswerShown(false)
     setIsPhotoShown(false)
-  }, [id, isAnswerShown])
+  }, [questionIndex, isAnswerShown, questions, router])
 
   const onShowPicture = useCallback(() => {
     setIsPhotoShown((isPhotoShown) => !isPhotoShown)
@@ -87,14 +94,14 @@ const Question = () => {
     }
     document.addEventListener('keyup', onKeyUp)
     return () => document.removeEventListener('keyup', onKeyUp)
-  }, [onNext, onPrevious])
+  }, [onNext, onPrevious, onShowPicture])
 
-  if (!/^\d+$/.test(id.toString())) {
-    return 'Only numbers accepted there'
+  if (!/^\d+$/.test(questionIndex.toString())) {
+    return <p>Only numbers accepted there</p>
   }
 
   if (!activeQuestion) {
-    return 'That’s not a question yet'
+    return <p>That’s not a question yet</p>
   }
 
   return (
@@ -108,6 +115,7 @@ const Question = () => {
             isAnimated
           />
           <Scores
+            players={players}
             questionId={activeQuestion.image.url}
             scores={scores || {}}
             onSetScores={handleSetScore}
@@ -116,6 +124,37 @@ const Question = () => {
       </main>
     </Layout>
   )
+}
+
+async function loadYaml<T>(fileName: string, topLevel: string): Promise<T> {
+  const fileDirectory = path.join(process.cwd(), 'lib')
+  const filePath = path.join(fileDirectory, fileName)
+  const fileYaml = yaml.load(await fs.readFile(filePath, 'utf-8')) as any
+  return fileYaml[topLevel] as T
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const players = getPlayersWithIDs(await loadYaml<IPlayer[]>('players.yaml', 'people'))
+  const questions = getQuestionsWithIds(await loadYaml<IQuestion[]>('questions.yaml', 'questions'))
+  const questionIndex = Number(params?.index) - 1
+  const activeQuestion = questions[questionIndex]
+  return {
+    props: {
+      questionIndex,
+      activeQuestion,
+      questions,
+      players,
+    },
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const questions = await loadYaml<IQuestion[]>('questions.yaml', 'questions')
+  const paths = Object.keys(questions).map((index) => `/${Number(index) + 1}`)
+  return {
+    paths,
+    fallback: true,
+  }
 }
 
 export default Question
