@@ -29,8 +29,8 @@ export default function Scores() {
 
   return (
     <Layout>
-      <h1>Scores</h1>
       <GameScores totalScores={totalScores} />
+      <h1>Scores</h1>
     </Layout>
   )
 }

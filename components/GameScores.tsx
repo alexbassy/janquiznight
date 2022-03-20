@@ -5,6 +5,8 @@ import { IPlayer, players } from '@/lib/questions'
 import { keyframes } from '@emotion/react'
 
 export const Wrap = styled(motion.ul)`
+  --radius: 100px;
+
   display: flex;
   list-style: none;
   align-items: flex-end;
@@ -28,11 +30,11 @@ export const Item = styled(motion.li)`
 
   ::after {
     content: '';
-    height: ${(props) => 20 + props.score * 10}px;
-    background: #ddd;
-    margin-top: -1rem;
+    height: ${(props) => 20 + props.score * 15}px;
+    background: rgb(255 255 255 / 0.15);
+    margin-top: -2.5rem;
     z-index: -1;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--radius) var(--radius);
     animation: ${heightTransition} 3s ease;
   }
 `
@@ -40,12 +42,13 @@ export const Item = styled(motion.li)`
 export const Avatar = styled.img`
   width: 5rem;
   height: 5rem;
-  border-radius: 8px;
+  border-radius: var(--radius);
   border: 3px solid white;
 `
 
 export const Amount = styled.span`
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 `
 
 interface IScoresProps {
@@ -59,6 +62,7 @@ const Scores: React.FC<IScoresProps> = ({ totalScores }) => {
         const playerScore = totalScores[player.name]
         return (
           <Item key={player.id} score={playerScore}>
+            <Amount>{playerScore || 0}</Amount>
             <Avatar src={`/players/${player.image}`} />
           </Item>
         )
